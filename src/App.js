@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import Titles from './components/Titles';
+import Form from './components/Form';
+import Posters from './components/Posters';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+
+
+class App extends Component {
+  state = {
+    images: [],
+    quote: "",
+    author: "",
+    font: "",
+    color: ""
+  }
+
+getPosterData = async (e) => {
+  e.preventDefault();
+  const image = e.target.elements.image.value;
+  const quote = e.target.elements.quote.value;
+  const author = e.target.elements.author.value;
+  const font = e.target.elements.font.value;
+  const color = e.target.elements.color.value;
+  const api_call = await fetch(`https://pixabay.com/api/?key=${CHAVEE}&q=${image}&image_type=photo&safesearch=true`);
+
+  const data = await api_call.json();
+  this.setState(
+    { images: data.hits,
+      quote: quote,
+      author: author,
+      font: font,
+      color: color
+    }
   );
+  console.log(this.state.images);
+  console.log(this.state.color);
+}
+
+
+  render() {
+    return(
+      <div className="App">
+        <Titles />
+        <Form getPosterData = {this.getPosterData}/>
+        <Posters
+          images = {this.state.images}
+          quote = {this.state.quote}
+          author = {this.state.author}
+          font = {this.state.font}
+          color = {this.state.color}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
