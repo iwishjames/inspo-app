@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/inspo-app/static/css/main.5b15a89f.chunk.css",
-    "main.js": "/inspo-app/static/js/main.bd1e9ca9.chunk.js",
-    "main.js.map": "/inspo-app/static/js/main.bd1e9ca9.chunk.js.map",
+    "main.css": "/inspo-app/static/css/main.5791cc65.chunk.css",
+    "main.js": "/inspo-app/static/js/main.5d5f60a6.chunk.js",
+    "main.js.map": "/inspo-app/static/js/main.5d5f60a6.chunk.js.map",
     "runtime~main.js": "/inspo-app/static/js/runtime~main.7db00cf2.js",
     "runtime~main.js.map": "/inspo-app/static/js/runtime~main.7db00cf2.js.map",
     "static/css/2.266e55a5.chunk.css": "/inspo-app/static/css/2.266e55a5.chunk.css",
-    "static/js/2.69e55787.chunk.js": "/inspo-app/static/js/2.69e55787.chunk.js",
-    "static/js/2.69e55787.chunk.js.map": "/inspo-app/static/js/2.69e55787.chunk.js.map",
+    "static/js/2.0bf4ffe6.chunk.js": "/inspo-app/static/js/2.0bf4ffe6.chunk.js",
+    "static/js/2.0bf4ffe6.chunk.js.map": "/inspo-app/static/js/2.0bf4ffe6.chunk.js.map",
     "index.html": "/inspo-app/index.html",
-    "precache-manifest.e68a74a0eca1af25164da32f0a8f42b6.js": "/inspo-app/precache-manifest.e68a74a0eca1af25164da32f0a8f42b6.js",
+    "precache-manifest.5b2ddc62b9bdd200a578b2b2e51b62d2.js": "/inspo-app/precache-manifest.5b2ddc62b9bdd200a578b2b2e51b62d2.js",
     "service-worker.js": "/inspo-app/service-worker.js",
     "static/css/2.266e55a5.chunk.css.map": "/inspo-app/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.5b15a89f.chunk.css.map": "/inspo-app/static/css/main.5b15a89f.chunk.css.map"
+    "static/css/main.5791cc65.chunk.css.map": "/inspo-app/static/css/main.5791cc65.chunk.css.map"
   }
 }
