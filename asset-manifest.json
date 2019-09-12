@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/inspo-app/static/css/main.5b15a89f.chunk.css",
-    "main.js": "/inspo-app/static/js/main.2d91ef50.chunk.js",
-    "main.js.map": "/inspo-app/static/js/main.2d91ef50.chunk.js.map",
+    "main.js": "/inspo-app/static/js/main.57b28998.chunk.js",
+    "main.js.map": "/inspo-app/static/js/main.57b28998.chunk.js.map",
     "runtime~main.js": "/inspo-app/static/js/runtime~main.7db00cf2.js",
     "runtime~main.js.map": "/inspo-app/static/js/runtime~main.7db00cf2.js.map",
     "static/css/2.266e55a5.chunk.css": "/inspo-app/static/css/2.266e55a5.chunk.css",
     "static/js/2.c7991587.chunk.js": "/inspo-app/static/js/2.c7991587.chunk.js",
     "static/js/2.c7991587.chunk.js.map": "/inspo-app/static/js/2.c7991587.chunk.js.map",
     "index.html": "/inspo-app/index.html",
-    "precache-manifest.35e8f6e55b61e1acacb800a14d25c6fd.js": "/inspo-app/precache-manifest.35e8f6e55b61e1acacb800a14d25c6fd.js",
+    "precache-manifest.5548341f1a0954f7d1c3b5477aa7a6ef.js": "/inspo-app/precache-manifest.5548341f1a0954f7d1c3b5477aa7a6ef.js",
     "service-worker.js": "/inspo-app/service-worker.js",
     "static/css/2.266e55a5.chunk.css.map": "/inspo-app/static/css/2.266e55a5.chunk.css.map",
     "static/css/main.5b15a89f.chunk.css.map": "/inspo-app/static/css/main.5b15a89f.chunk.css.map"
