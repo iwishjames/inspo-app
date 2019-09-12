@@ -8,10 +8,11 @@ https://pixabay.com/api/docs/#api_search_images
 - Bootstrap
 - React
 - Pixabay API
-
+- NPM html-to-image
+https://www.npmjs.com/package/html-to-image 
 
 #Thanks
-Thank you Paulina with your help with live text update!!! 
+Thank you Paulina with your help with live text update!!!
 
 # Challenges
 - Understanding the core and functioning of how React works.

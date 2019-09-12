@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Titles from './Titles';
 import { Link } from "react-router-dom";
-import html2canvas from 'html2canvas';
+import htmlToImage from 'html-to-image';
 
 class Poster extends Component {
   state = {
@@ -56,17 +56,20 @@ class Poster extends Component {
 
 
   handleClick = () => {
-    const screenshot = document.querySelector("#capture");
-
-    html2canvas(document.body).then(function(canvas) {
-        document.body.appendChild(canvas);
-    });
+    htmlToImage.toJpeg(document.getElementById('capture'), { quality: 0.95 })
+      .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'myinspo.jpeg';
+        link.href = dataUrl;
+        link.click();
+      });
   }
 
   render() {
     return(
       <div style={{maxWidth: "390px", margin: "0 auto"}}>
         <Titles />
+
         <div id="capture" className="ind_Poster_card card bg-dark text-white rounded-0">
           <img className="card-img" src={this.state.posterImage}/>
           <div className="card-img-overlay">
@@ -92,7 +95,7 @@ class Poster extends Component {
             <option value="Roboto">Roboto</option>
           </select>
 
-          <button onClick={this.handleClick}>Screenshot</button>
+          <button onClick={this.handleClick}>Download Poster</button>
           <Link to="/">
           <button >Go Back</button>
           </Link>
