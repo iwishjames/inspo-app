@@ -22,7 +22,7 @@ getPosterData = async (e) => {
   const author = e.target.elements.author.value;
   const font = e.target.elements.font.value;
   const color = e.target.elements.color.value;
-  const api_call = await fetch(`https://pixabay.com/api/?key=${CHAVEE}&q=${image}&image_type=photo&safesearch=true`);
+  const api_call = await fetch(`https://pixabay.com/api/?key=${CHAVEE}&q=${image}&image_type=photo&orientation=vertical&safesearch=true`);
 
   const data = await api_call.json();
   this.setState(
@@ -34,7 +34,6 @@ getPosterData = async (e) => {
     }
   );
   console.log(this.state.images);
-  console.log(this.state.color);
 }
 
 

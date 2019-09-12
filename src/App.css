@@ -1,19 +1,39 @@
 body {
-  background-color: black !important;
+  /* background-color: black !important; */
+}
+
+.ind_Poster_card {
+  /* height: 350px;
+  width: 250px; */
+  display: inline-flex;
+  vertical-align: top;
+  border: 0;
+}
+
+.ind_Poster_card img {
+  height: 595px;
+  width: 420px;
+  object-fit: cover;
+  object-position: middle;
+  /* border: solid 8px white; */
+  border-radius: 0;
+  border: 0;
+  filter: blur(0.5px);
 }
 
 .poster_card {
-  height: 450px;
-  width: 350px;
+  /* height: 350px;
+  width: 250px; */
   display: inline-flex;
   vertical-align: top;
   margin: 5px;
   margin-top: 8px;
+  border:0;
 }
 
 .poster_card img {
-  height: 442px;
-  width: 342px;
+  height: 350px;
+  width: 250px;
   object-fit: cover;
   object-position: middle;
   /* border: solid 8px white; */
@@ -23,11 +43,12 @@ body {
 
 .poster_quote {
   font-size: 40px;
-  padding: 0 50px 0 50px;
+  text-align: center;
   padding-top: 20%;
 }
 
 .poster_author {
+  text-align: center;
 }
 
 
