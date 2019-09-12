@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/inspo-app/precache-manifest.02bbc968c8f25cef1aba7e576702127c.js"
+  "/inspo-app/precache-manifest.6fbaf744bcb14fbb2f31a1bee51225d0.js"
 );
 
 self.addEventListener('message', (event) => {
