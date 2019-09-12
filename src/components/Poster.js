@@ -4,12 +4,12 @@ import htmlToImage from 'html-to-image';
 
 class Poster extends Component {
   state = {
-    posterImage: "https://cdn.pixabay.com/photo/2019/03/04/13/28/zebra-4034126_1280.jpg",
-    posterQuote: "Not All Who Wonder Are Lost",
+    posterImage: this.props.location.state.imageURL,
+    posterQuote: this.props.location.state.quote,
     posterQuoteSize: 75,
     posterQuoteColor: undefined,
     posterQuoteFont: undefined,
-    posterAuthor: "xBlade",
+    posterAuthor: this.props.location.state.author,
     posterAuthorSize: 18,
     posterAuthorColor: undefined,
     posterAuthorFont: undefined,
