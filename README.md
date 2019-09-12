@@ -9,7 +9,7 @@ https://pixabay.com/api/docs/#api_search_images
 - React
 - Pixabay API
 - NPM html-to-image
-https://www.npmjs.com/package/html-to-image 
+https://www.npmjs.com/package/html-to-image
 
 #Thanks
 Thank you Paulina with your help with live text update!!!
@@ -23,15 +23,15 @@ Thank you Paulina with your help with live text update!!!
 
 #potential features.
 Character limit font size update.
-live poster size update
+<!-- live poster size update
 Live update the clicked poster.
-live update the text on the poster.
-select from different fonts.
-text color picker
-images with spaces yellow+flower (will need to splice)
+live update the text on the poster. -->
+<!-- select from different fonts.
+text color picker -->
+<!-- images with spaces yellow+flower (will need to splice) -->
 random image from pixabay with random quote.
 credit to the photo user on the main page.
-ability to download the finalised poster!
+<!-- ability to download the finalised poster! -->
 
 
 With JSX we can't use for loop or for each loop..have to use Map!

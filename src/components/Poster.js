@@ -133,8 +133,8 @@ class Poster extends Component {
               <option value="Roboto">Roboto</option>
             </select>
           <div class="dropdown-divider"></div>
-            <div style={{marginLeft: 8, color: "silver"}}>Image Blur:</div>
-            <input style={{marginLeft: 8}} type="range" onChange={this.handleChangeImageBlur}/>
+            <div style={{marginLeft: 8, color: "silver"}}>Image Blur: {this.state.posterImageBlur}px</div>
+            <input style={{marginLeft: 8, width: 180}} step="0.10" type="range" max="3" onChange={this.handleChangeImageBlur}/>
           <div class="dropdown-divider"></div>
             <button className="form__button2" onClick={this.handleClick}>Download Poster</button>
         </div>

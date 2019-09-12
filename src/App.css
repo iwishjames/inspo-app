@@ -2,6 +2,13 @@ body {
   background-color: #1b1b1b !important;
 }
 
+.pixabay {
+  text-decoration: underline;
+}
+
+a.pixabay2 {
+  color: white;
+}
 .editor_Toolbox {
   display: inline-block;
   width: 200px;
@@ -27,14 +34,14 @@ body {
 
 .inspo__title  {
   font-size: 50px;
-  color: #FFE7D0;
+  color: white;
   font-weight: bold;
   font-family: Helvetica;
   text-align: center;
 }
 
 .inspo__line  {
-  color: #FFE7D0;
+  color: white;
   font-style: italic;
   text-align: center;
 }
@@ -43,7 +50,7 @@ body {
   background: transparent;
   font-family: Helvetica;
   border: 0;
-  border-bottom: solid 2px #FFE7D0;
+  border-bottom: solid 2px #FC6E20;
   margin-right: 10px;
   letter-spacing: 2px;
   width: 10%;
