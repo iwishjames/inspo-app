@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "44b2114ebf9c6e659a02e8cbb93b2886",
+    "revision": "ecfafb4ca482d719a30d21ebc67927b2",
     "url": "/inspo-app/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/inspo-app/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "171f68624fa308874b13",
+    "revision": "28101ebedd8a1d7990e8",
     "url": "/inspo-app/static/css/main.5b15a89f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/inspo-app/static/js/2.c7991587.chunk.js"
   },
   {
-    "revision": "171f68624fa308874b13",
-    "url": "/inspo-app/static/js/main.8a97fd90.chunk.js"
+    "revision": "28101ebedd8a1d7990e8",
+    "url": "/inspo-app/static/js/main.2d91ef50.chunk.js"
   },
   {
     "revision": "28a76deff2a93b00f08a",
