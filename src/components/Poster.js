@@ -5,6 +5,7 @@ import htmlToImage from 'html-to-image';
 class Poster extends Component {
   state = {
     posterImage: this.props.location.state.imageURL,
+    posterImageBlur: 0,
     posterQuote: this.props.location.state.quote,
     posterQuoteSize: 75,
     posterQuoteColor: undefined,
@@ -25,6 +26,13 @@ class Poster extends Component {
   //     posterAuthor: posterAuthor,
   //   });
   // }
+
+
+  handleChangeImageBlur = (e) => {
+    this.setState({
+      posterImageBlur: e.target.value,
+    });
+  }
 
   handleChangeQuote = (e) => {
     this.setState({
@@ -84,7 +92,7 @@ class Poster extends Component {
 
         <div className="editor_Canvas">
           <div id="capture" className="ind_Poster_card card bg-dark text-white rounded-0">
-            <img style={{filter: "blur(3px)"}} className="card-img" src={this.state.posterImage}/>
+            <img style={{filter: `blur(${this.state.posterImageBlur}px)`}} className="card-img" src={this.state.posterImage}/>
             <div className="card-img-overlay">
               <h5 style={{color: this.state.posterQuoteColor, fontFamily: this.state.posterQuoteFont, fontSize: `${this.state.posterQuoteSize}px`}} className="poster_quote card-title">{this.state.posterQuote}</h5>
               {this.state.posterAuthor && <p style={{color: this.state.posterAuthorColor, fontFamily: this.state.posterAuthorFont, fontSize: `${this.state.posterAuthorSize}px`}} className="poster_author card-text font-weight-light font-italic align-middle">- {this.state.posterAuthor}</p>}
@@ -101,7 +109,7 @@ class Poster extends Component {
           <div class="dropdown-divider"></div>
             <div style={{marginLeft: 8, color: "silver"}}>Quote:</div>
             <input style={{marginTop : 3}} className="form__input_black" type="textarea" placeholder="Quote" value={this.state.posterQuote} onChange={this.handleChangeQuote} />
-            <input className="form__input_number " type="number" placeholder="75" onChange={this.handleChangeQuoteSize}/>
+            <input className="form__input_number " type="number" placeholder="75" value={this.state.posterQuoteSize} onChange={this.handleChangeQuoteSize}/>
             <input style={{marginTop : 8, marginLeft: 8, width: 40}} type="color" onChange={this.handleChangeQuoteColor}/>
             <select className="font_picker" onChange={this.handleChangeQuoteFont}>
               <option value="Helvetica Neue">Helvetica Neue</option>
@@ -114,7 +122,7 @@ class Poster extends Component {
           <div class="dropdown-divider"></div>
             <div style={{marginLeft: 8, color: "silver"}}>Author:</div>
             <input style={{marginTop : 3}} className="form__input_black" type="text" placeholder="Author" value={this.state.posterAuthor} onChange={this.handleChangeAuthor} />
-            <input className="form__input_number " type="number" placeholder="18" onChange={this.handleChangeAuthorSize}/>
+            <input className="form__input_number " type="number" placeholder="18" value={this.state.posterAuthorSize} onChange={this.handleChangeAuthorSize}/>
             <input style={{marginTop : 8, marginLeft: 8, width: 40}} type="color" onChange={this.handleChangeAuthorColor}/>
             <select className="font_picker" onChange={this.handleChangeAuthorFont}>
               <option value="Helvetica Neue">Helvetica Neue</option>
@@ -126,9 +134,9 @@ class Poster extends Component {
             </select>
           <div class="dropdown-divider"></div>
             <div style={{marginLeft: 8, color: "silver"}}>Image Blur:</div>
-            <input style={{marginLeft: 8}} type="range" min="0px" max="3px" onChange={this.handleBlur}/>
+            <input style={{marginLeft: 8}} type="range" onChange={this.handleChangeImageBlur}/>
           <div class="dropdown-divider"></div>
-            <button className="form__button" onClick={this.handleClick}>Download Poster</button>
+            <button className="form__button2" onClick={this.handleClick}>Download Poster</button>
         </div>
       </div>
     );

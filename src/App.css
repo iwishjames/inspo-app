@@ -93,6 +93,23 @@ body {
   background-color: #e8641c;
 }
 
+.form__button2 {
+  background-color: #FC6E20;
+  color: white;
+  width: 88%;
+  padding: 0.2rem 0.9rem;
+  margin: 0 0.2rem;
+  border-radius: 5px;
+  border-color: #FC6E20;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-left: 0.7rem;
+}
+
+.form__button2:hover {
+  background-color: #e8641c;
+}
+
 .form__button_white {
   background-color: white;
   color: black;
