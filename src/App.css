@@ -119,11 +119,11 @@ a.pixabay2 {
 
 .form__button_white {
   background-color: white;
-  color: black;
+  color: grey;
   padding: 0.2rem 0.9rem;
   margin: 0 0.2rem;
   border-radius: 5px;
-  border-color: #323232;
+  border-color: silver;
   /* text-transform: uppercase; */
   font-weight: 500;
   margin-left: 0.7rem;
