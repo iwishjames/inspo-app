@@ -4,8 +4,8 @@ class Titles extends Component {
   render() {
     return (
       <div>
-        <h1>Inspo</h1>
-        <p>Create inspirational posters for your quotes!</p>
+        <h1 className="inspo__title">Inspo</h1>
+        <p className="inspo__line">Create inspirational posters with high quality images from Pixabay!</p>
       </div>
     );
   }

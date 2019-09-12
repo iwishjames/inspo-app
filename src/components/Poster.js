@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Titles from './Titles';
 import { Link } from "react-router-dom";
 import htmlToImage from 'html-to-image';
 
@@ -9,20 +8,20 @@ class Poster extends Component {
     posterQuote: this.props.location.state.quote,
     posterAuthor: this.props.location.state.author,
     posterColor: "",
-    posterFont: "",
+    posterFont: "50px",
     posterFontSize: "",
   }
 
-  componentDidMount () {
-    const posterImage = this.props.location.state.imageURL;
-    const posterQuote = this.props.location.state.quote;
-    const posterAuthor = this.props.location.state.author;
-    this.setState({
-      posterImage: posterImage,
-      posterQuote: posterQuote,
-      posterAuthor: posterAuthor,
-    });
-  }
+  // componentDidMount () {
+  //   const posterImage = this.props.location.state.imageURL;
+  //   const posterQuote = this.props.location.state.quote;
+  //   const posterAuthor = this.props.location.state.author;
+  //   this.setState({
+  //     posterImage: posterImage,
+  //     posterQuote: posterQuote,
+  //     posterAuthor: posterAuthor,
+  //   });
+  // }
 
   handleChangeQuote = (e) => {
     this.setState({
@@ -67,38 +66,54 @@ class Poster extends Component {
 
   render() {
     return(
-      <div style={{maxWidth: "390px", margin: "0 auto"}}>
-        <Titles />
+      <div style={{maxWidth: "1000px"}}>
 
-        <div id="capture" className="ind_Poster_card card bg-dark text-white rounded-0">
-          <img className="card-img" src={this.state.posterImage}/>
-          <div className="card-img-overlay">
-            <h5 style={{color: this.state.posterColor, fontFamily: this.state.posterFont, fontSize: `${this.state.posterFontSize}px`}} className="poster_quote card-title">{this.state.posterQuote}</h5>
-            {this.state.posterAuthor && <p className="poster_author card-text font-weight-light font-italic align-middle">- {this.state.posterAuthor}</p>}
+        <div className="editor_Canvas">
+          <div id="capture" className="ind_Poster_card card bg-dark text-white rounded-0">
+            <img style={{filter: "blur(3px)"}} className="card-img" src={this.state.posterImage}/>
+            <div className="card-img-overlay">
+              <h5 style={{color: this.state.posterColor, fontFamily: this.state.posterFont, fontSize: `${this.state.posterFontSize}px`}} className="poster_quote card-title">{this.state.posterQuote}</h5>
+              {this.state.posterAuthor && <p className="poster_author card-text font-weight-light font-italic align-middle">- {this.state.posterAuthor}</p>}
+            </div>
           </div>
         </div>
 
-        <div>
-          <input type="text" placeholder="Quote" value={this.state.posterQuote} onChange={this.handleChangeQuote} />
-          <input type="text" placeholder="Author" value={this.state.posterAuthor} onChange={this.handleChangeAuthor} />
-          <input type="color" onChange={this.handleChangeColor}/>
-          <input type="number" min="20" max="100" placeholder="Font Size" onChange={this.handleChangeFontSize}/>
-
-          <input type="checkbox" name="Bold" value="Bold" onChange={this.handleToggleBold}/>
-
-          <select onChange={this.handleChangeFont}>
-            <option value="Helvetica Neue">Helvetica Neue</option>
-            <option value="Sans-Serif">Sans-serif</option>
-            <option value="Monospace">Monospace</option>
-            <option value="Cursive">Cursive</option>
-            <option value="Fantasy">Fantasy</option>
-            <option value="Roboto">Roboto</option>
-          </select>
-
-          <button onClick={this.handleClick}>Download Poster</button>
+        <div className="editor_Toolbox">
           <Link to="/">
-          <button >Go Back</button>
+          <button style={{marginTop : 8}} className="form__button_white" >Go Back</button>
           </Link>
+          <div></div>
+          <div class="dropdown-divider"></div>
+            <div style={{marginLeft: 8, color: "silver"}}>Quote:</div>
+            <input style={{marginTop : 3}} className="form__input_black" type="textarea" placeholder="Quote" value={this.state.posterQuote} onChange={this.handleChangeQuote} />
+            <input className="form__input_number " type="number" placeholder="40" onChange={this.handleChangeFontSize}/>
+            <input style={{marginTop : 8, marginLeft: 8, width: 40}} type="color" onChange={this.handleChangeColor}/>
+            <select className="font_picker" onChange={this.handleChangeFont}>
+              <option value="Helvetica Neue">Helvetica Neue</option>
+              <option value="Sans-Serif">Sans-serif</option>
+              <option value="Monospace">Monospace</option>
+              <option value="Cursive">Cursive</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="Roboto">Roboto</option>
+            </select>
+          <div class="dropdown-divider"></div>
+            <div style={{marginLeft: 8, color: "silver"}}>Author:</div>
+            <input style={{marginTop : 3}} className="form__input_black" type="text" placeholder="Author" value={this.state.posterAuthor} onChange={this.handleChangeAuthor} />
+            <input className="form__input_number " type="number" placeholder="18" onChange={this.handleChangeFontSize}/>
+            <input style={{marginTop : 8, marginLeft: 8, width: 40}} type="color" onChange={this.handleChangeColor}/>
+            <select className="font_picker" onChange={this.handleChangeFont}>
+              <option value="Helvetica Neue">Helvetica Neue</option>
+              <option value="Sans-Serif">Sans-serif</option>
+              <option value="Monospace">Monospace</option>
+              <option value="Cursive">Cursive</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="Roboto">Roboto</option>
+            </select>
+          <div class="dropdown-divider"></div>
+            <div style={{marginLeft: 8, color: "silver"}}>Image Blur:</div>
+            <input style={{marginLeft: 8}} type="range" min="0px" max="3px" onChange={this.handleBlur}/>
+          <div class="dropdown-divider"></div>
+            <button className="form__button" onClick={this.handleClick}>Download Poster</button>
         </div>
       </div>
     );
