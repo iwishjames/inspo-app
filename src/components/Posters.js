@@ -8,15 +8,17 @@ const Posters = props => (
       <Link to={{
         pathname: `/poster/${image.id}`,
           state: {
-            image: image.largeImageURL,
+            imageId: image.id,
+            imageURL: image.largeImageURL,
             quote: props.quote,
-            author: props.author
+            author: props.author,
+            imageQuery: props.imageQuery,
           }
       }}>
       <div key={image.id} className="poster_card card bg-dark text-white rounded-0">
         <img className="poster_cardImage card-img" src={image.largeImageURL} alt={ image.tags}/>
         <div className="card-img-overlay">
-          <h5 style={{color: props.color, fontFamily: props.font }} className="poster_quote card-title">{props.quote}</h5>
+          <h5 className="poster_quote card-title">{props.quote}</h5>
           {props.author && <p className="poster_author card-text font-weight-light font-italic align-middle">- {props.author}</p>}
         </div>
       </div>

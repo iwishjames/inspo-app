@@ -11,33 +11,26 @@ class App extends Component {
     images: [],
     quote: "",
     author: "",
-    font: "",
-    color: ""
+    imageQuery: "",
   }
 
 getPosterData = async (e) => {
   e.preventDefault();
-  console.log('che', CHAVEE);
-  const image = e.target.elements.image.value;
+  const imageQuery = e.target.elements.imageQuery.value;
   const quote = e.target.elements.quote.value;
   const author = e.target.elements.author.value;
-  const font = e.target.elements.font.value;
-  const color = e.target.elements.color.value;
-  const api_call = await fetch(`https://pixabay.com/api/?key=${CHAVEE}&q=${image}&image_type=photo&orientation=vertical&safesearch=true`);
+  const api_call = await fetch(`https://pixabay.com/api/?key=${CHAVEE}&q=${imageQuery}&image_type=photo&orientation=vertical&safesearch=true&per_page=30`);
 
   const data = await api_call.json();
   this.setState(
     { images: data.hits,
       quote: quote,
       author: author,
-      font: font,
-      color: color
+      imageQuery: imageQuery,
     }
   );
   console.log(this.state.images);
 }
-
-
   render() {
     return(
       <div className="App">
@@ -47,8 +40,7 @@ getPosterData = async (e) => {
           images = {this.state.images}
           quote = {this.state.quote}
           author = {this.state.author}
-          font = {this.state.font}
-          color = {this.state.color}
+          imageQuery = {this.state.imageQuery}
         />
       </div>
     );

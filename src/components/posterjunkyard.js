@@ -1,27 +1,14 @@
 import React, {Component} from 'react';
-import Titles from './Titles';
-import { Link } from "react-router-dom";
 import html2canvas from 'html2canvas';
 
 class Poster extends Component {
   state = {
-    posterImage: this.props.location.state.imageURL,
+    posterImage: this.props.location.state.image,
     posterQuote: this.props.location.state.quote,
     posterAuthor: this.props.location.state.author,
     posterColor: "",
     posterFont: "",
     posterFontSize: "",
-  }
-
-  componentDidMount () {
-    const posterImage = this.props.location.state.imageURL;
-    const posterQuote = this.props.location.state.quote;
-    const posterAuthor = this.props.location.state.author;
-    this.setState({
-      posterImage: posterImage,
-      posterQuote: posterQuote,
-      posterAuthor: posterAuthor,
-    });
   }
 
   handleChangeQuote = (e) => {
@@ -66,7 +53,6 @@ class Poster extends Component {
   render() {
     return(
       <div style={{maxWidth: "390px", margin: "0 auto"}}>
-        <Titles />
         <div id="capture" className="ind_Poster_card card bg-dark text-white rounded-0">
           <img className="card-img" src={this.state.posterImage}/>
           <div className="card-img-overlay">
@@ -81,7 +67,7 @@ class Poster extends Component {
           <input type="color" onChange={this.handleChangeColor}/>
           <input type="number" min="20" max="100" placeholder="Font Size" onChange={this.handleChangeFontSize}/>
 
-          <input type="checkbox" name="Bold" value="Bold" onChange={this.handleToggleBold}/>
+          <input type="radio" name="Bold" value="Bold" onChange={this.handleToggleBold}/>
 
           <select onChange={this.handleChangeFont}>
             <option value="Helvetica Neue">Helvetica Neue</option>
@@ -93,9 +79,6 @@ class Poster extends Component {
           </select>
 
           <button onClick={this.handleClick}>Screenshot</button>
-          <Link to="/">
-          <button >Go Back</button>
-          </Link>
         </div>
       </div>
     );
