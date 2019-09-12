@@ -17,6 +17,7 @@ class App extends Component {
 
 getPosterData = async (e) => {
   e.preventDefault();
+  console.log('che', CHAVEE);
   const image = e.target.elements.image.value;
   const quote = e.target.elements.quote.value;
   const author = e.target.elements.author.value;
