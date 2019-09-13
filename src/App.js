@@ -31,6 +31,7 @@ getPosterData = async (e) => {
   );
   console.log(this.state.images);
 }
+
   render() {
     return(
       <div className="App">
